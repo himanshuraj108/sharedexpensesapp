@@ -93,7 +93,7 @@ export default function SettleUpModal({ friend, netBalance, groupId, onClose, on
 
           {/* AMOUNT ROW - exact Splitwise ₹ box + teal underline */}
           <div className="settle-amount-row">
-            <div className="expense-currency-box" style={{ fontSize: 18, fontWeight: 700 }}>₹</div>
+            <div className="exp-currency" style={{ fontSize: 18, fontWeight: 700 }}>₹</div>
             <input
               id="settle-amount"
               type="number"
@@ -109,8 +109,8 @@ export default function SettleUpModal({ friend, netBalance, groupId, onClose, on
           </div>
 
           {/* BOTTOM META */}
-          <div className="expense-modal-bottom" style={{ marginTop: 8 }}>
-            <div className="expense-modal-meta">
+          <div className="exp-modal-bottom" style={{ marginTop: 8 }}>
+            <div className="exp-modal-meta">
               <Calendar size={16} />
               <input
                 id="settle-date"
@@ -120,7 +120,7 @@ export default function SettleUpModal({ friend, netBalance, groupId, onClose, on
                 style={{ border: 'none', background: 'transparent', fontSize: 13, color: '#6c757d', cursor: 'pointer' }}
               />
             </div>
-            <div className="expense-modal-meta">
+            <div className="exp-modal-meta">
               <Users size={16} />
               <span>{groupId ? 'Group' : 'No group'}</span>
             </div>

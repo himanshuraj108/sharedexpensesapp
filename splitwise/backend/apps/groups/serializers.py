@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
 from .models import Group, GroupMember
+# pyrefly: ignore [missing-import]
 from apps.users.serializers import UserSerializer
 
 User = get_user_model()

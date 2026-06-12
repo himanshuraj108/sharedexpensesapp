@@ -4,20 +4,20 @@ This document records the AI collaboration process, key prompts, and technical c
 
 ---
 
-## 🤖 AI Tools Used
+## AI Tools Used
 *   **Primary AI Agent**: Google DeepMind's Antigravity coding assistant.
 *   **Underlying Engine**: Claude 3.5 Sonnet / Gemini Thinking models.
 
 ---
 
-## 🔑 Key Prompts
+## Key Prompts
 1.  **Workspace Separation**: *"Create a helper script to push files one by one to github"*
 2.  **Project Initialization**: *"npx -y create-vite frontend --template react --no-interactive"*
 3.  **Unified App Design**: *"ok make it in sharedexpansesapp"*
 
 ---
 
-## 🛠️ Concrete Corrections (3 Cases Vetted and Fixed)
+## Concrete Corrections (3 Cases Vetted and Fixed)
 
 ### Case 1: Missing DB Query Q import in Views and Importers
 *   **What the AI proposed**: 

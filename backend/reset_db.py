@@ -36,14 +36,6 @@ with transaction.atomic():
     print("Deleting all Group records...")
     Group.objects.all().delete()
 
-    # Delete test users that shouldn't exist
-    for u in ['testuser_antigravity']:
-        try:
-            User.objects.get(username=u).delete()
-            print(f"Deleted test user: {u}")
-        except User.DoesNotExist:
-            pass
-
     # Ensure all flatmate users exist
     flatmates = {
         'Aisha': 'aisha@example.com',
@@ -53,6 +45,12 @@ with transaction.atomic():
         'Sam': 'sam@example.com',
         'Dev': 'dev@example.com',
     }
+
+    # Delete all other non-staff users to keep the database clean
+    other_users = User.objects.exclude(username__in=list(flatmates.keys())).exclude(is_staff=True)
+    for u in other_users:
+        print(f"Deleted user: {u.username}")
+        u.delete()
     for username, email in flatmates.items():
         u, created = User.objects.get_or_create(username=username, defaults={'email': email})
         if created:

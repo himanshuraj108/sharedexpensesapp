@@ -45,11 +45,11 @@ export default function Landing() {
   };
 
   return (
-    <div className="min-h-screen bg-background flex flex-col md:flex-row">
+    <div className="min-h-screen md:h-screen md:overflow-hidden bg-background flex flex-col md:flex-row">
       {/* Left Pane - Marketing Highlight */}
-      <div className="w-full md:w-1/2 bg-accent-light border-r border-border flex flex-col justify-between p-8 md:p-16">
+      <div className="w-full md:w-1/2 bg-accent-light border-r border-border flex flex-col justify-between p-6 md:p-8 lg:p-12 xl:p-16">
         <div>
-          <div className="flex items-center gap-2 mb-12">
+          <div className="flex items-center gap-2 mb-6 md:mb-8 lg:mb-12">
             <div className="h-10 w-10 bg-accent rounded-xl flex items-center justify-center text-white font-heading font-extrabold text-xl shadow-premium">
               F
             </div>
@@ -57,17 +57,17 @@ export default function Landing() {
           </div>
 
           <div className="max-w-md">
-            <h1 className="font-heading text-4xl md:text-5xl font-extrabold text-textPrimary leading-tight mb-6">
+            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-extrabold text-textPrimary leading-tight mb-4 md:mb-6">
               Simplify shared expenses, <span className="text-accent">fairly.</span>
             </h1>
-            <p className="text-textMuted text-base mb-10 leading-relaxed">
+            <p className="text-textMuted text-xs md:text-sm lg:text-base mb-6 md:mb-8 lg:mb-10 leading-relaxed">
               Keep track of flatmate utilities, group travel, and shared events without the hassle. Time-aware splitting, multi-currency support, and debt simplification all built-in.
             </p>
           </div>
         </div>
 
-        <div className="space-y-6 max-w-md">
-          <div className="flex gap-4 items-start bg-surface p-5 rounded-2xl border border-border/60 shadow-premium">
+        <div className="space-y-4 md:space-y-6 max-w-md">
+          <div className="flex gap-4 items-start bg-surface p-4 lg:p-5 rounded-2xl border border-border/60 shadow-premium">
             <div className="p-3 bg-accent-light text-accent rounded-xl">
               <Shield size={20} />
             </div>
@@ -77,7 +77,7 @@ export default function Landing() {
             </div>
           </div>
 
-          <div className="flex gap-4 items-start bg-surface p-5 rounded-2xl border border-border/60 shadow-premium">
+          <div className="flex gap-4 items-start bg-surface p-4 lg:p-5 rounded-2xl border border-border/60 shadow-premium">
             <div className="p-3 bg-accent-light text-accent rounded-xl">
               <Sparkles size={20} />
             </div>
@@ -90,8 +90,8 @@ export default function Landing() {
       </div>
 
       {/* Right Pane - Auth Card */}
-      <div className="w-full md:w-1/2 flex items-center justify-center p-8 md:p-16">
-        <div className="w-full max-w-md bg-surface border border-border rounded-3xl p-8 shadow-premium">
+      <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-8 lg:p-12 xl:p-16">
+        <div className="w-full max-w-md bg-surface border border-border rounded-3xl p-6 md:p-8 shadow-premium">
           <h2 className="font-heading text-2xl font-bold text-textPrimary mb-2">
             {isLogin ? 'Sign In' : 'Create Account'}
           </h2>
